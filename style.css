@@ -1,0 +1,229 @@
+/*Fonts*/
+
+@import url('https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap');
+
+/* General styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("./img/home-hero.jpg");
+    font-family: 'Darker Grotesque', sans-serif;
+    color: #fff;
+}
+
+/*Hide mobile-nav styles */
+
+.mobile-reservations-nav-elem,
+.mobile-contacts-nav-elem {
+    display: none;
+}
+
+/* nav styles */
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 167px;
+}
+
+/*Nav logo styles */
+
+.nav-logo {
+    margin-left: 90px;
+    margin-bottom: 20px;
+}
+
+.nav-logo-name {
+    margin: 0;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 28px;
+    letter-spacing: 11px;
+    position: relative;
+}
+
+.desktop-nav-logo-span {
+    position: absolute;
+    top: 55px;;
+    right: 28px;
+    font-size: 6.3px;
+    font-weight: 200;
+    letter-spacing: 3px;
+}
+
+/*Right side nav styles */
+
+.right-side-nav-elements {
+    width: 470px;
+    height: 167px;
+    align-items: center;
+    justify-items: flex-start;
+    display: flex;
+}
+
+.right-side-nav-elements * {
+    margin-top: 10px;
+}
+
+.contacts-nav-elem {
+    margin-left: 36px;
+}
+
+.burger-nav-item {
+    margin-left: 50px;
+    margin-bottom: 10px;;
+}
+
+/*Nav animations*/
+
+/*Nav elems hover effect*/
+
+.contacts-nav-elem:hover *,
+.reservations-nav-elem:hover * {
+    transition: 0.6s;
+    fill: #ffb7ae;
+}
+
+.contacts-nav-elem *,
+.reservations-nav-elem * {
+    transition: 0.6s;
+}
+
+/*Burger nav animation*/
+
+.burger-nav-item rect:nth-child(2),
+.burger-nav-item rect:nth-child(4),
+.burger-nav-item rect:nth-child(6) {
+    transition: width 0.4s ease-in-out;
+
+}
+
+.burger-nav-item:hover rect:nth-child(2),
+.burger-nav-item:hover rect:nth-child(4),
+.burger-nav-item:hover rect:nth-child(6) {
+    width: 0px;
+    transition: width 0.4s ease-in-out;
+
+}
+
+.burger-nav-item:hover rect:nth-child(4) {
+    transition-delay: 0.1s;
+}
+
+.burger-nav-item rect:nth-child(4) {
+    transition-delay: 0.1s;
+}
+
+.burger-nav-item:hover rect:nth-child(6) {
+    transition-delay: 0.2s;
+}
+
+.burger-nav-item rect:nth-child(6) {
+    transition-delay: 0.2s;
+}
+
+/*Making navs elements cursor to pointer*/
+
+.nav-logo,
+.reservations-nav-elem,
+.contacts-nav-elem,
+.burger-nav-item {
+    cursor: pointer;
+}
+
+/*Media queries*/
+
+@media screen and (max-width: 1235px) {
+
+    .main-nav {
+        height: 121px;
+    }
+
+    .nav-logo-name {
+        font-size: 22px;
+        line-height: 24px;
+        letter-spacing: 8px;
+    }
+    
+    .desktop-nav-logo-span {
+        top: 45px;;
+        font-size: 6px;
+        letter-spacing: 1px;
+    }
+
+}
+
+@media screen and (max-width: 1035px) {
+
+ /*Stop displaying "resort and spa under logo"*/
+.desktop-nav-logo-span {
+    display: none;
+}
+
+.nav-logo-name {
+    margin-top: 20px;
+}
+
+/*Remove hover effects*/
+.contacts-nav-elem:hover *,
+.reservations-nav-elem:hover * {
+    transition: 0.6s;
+    fill: #fff;
+}
+
+.burger-nav-item:hover rect:nth-child(2),
+.burger-nav-item:hover rect:nth-child(4),
+.burger-nav-item:hover rect:nth-child(6) {
+    width: 40px;
+
+}
+
+}
+
+@media screen and (max-width: 770px) {
+
+    .main-nav {
+        height: 97px;
+    }
+
+    .nav-logo {
+        margin-left: 30px;
+    }
+
+    .nav-logo-name {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 7px;
+    }
+
+    /*Stop displaying nav elements text*/
+    .reservations-nav-elem,
+    .contacts-nav-elem {
+        display: none;
+    }
+
+    /*Display new nav element icons*/
+    .mobile-reservations-nav-elem,
+    .mobile-contacts-nav-elem {
+        display: inline-block;
+        margin-right: 40px;
+        cursor: pointer;
+    }
+
+    .burger-nav-item {
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+
+    .right-side-nav-elements {
+        width: 200px;
+    }
+}
